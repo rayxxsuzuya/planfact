@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *,
 *:before,
 *:after {
@@ -58,6 +60,7 @@ body {
   border-radius: 3px;
   padding: 16px 15px;
   min-width: 200px;
+  max-width: 200px;
   max-height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +84,7 @@ body {
   border: 2px solid #F64B2D;
   padding: 16px 15px;
   min-width: 200px;
+  max-width: 200px;
   max-height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,4 +389,118 @@ body {
   letter-spacing: -0.3px;
   color: rgba(255, 255, 255, 0.8);
   max-width: 286px;
+}
+
+.pricing {
+  padding: 100px 0 128px;
+  overflow: hidden;
+}
+
+.pricing__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 62px;
+  letter-spacing: -2.4px;
+  color: #18214D;
+  margin-bottom: 16px;
+}
+
+.pricing__subtitle {
+  text-align: center;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 430px;
+}
+
+.pricing__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pricing__item {
+  width: calc(100% / 3);
+  text-align: center;
+  min-height: 400px;
+  padding: 26px 50px 28px;
+}
+
+.pricing__item:nth-child(2) {
+  border-left: 1px solid #DFE4EA;
+  border-right: 1px solid #DFE4EA;
+}
+
+.pricing__post {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.55px;
+  color: #18214D;
+  margin-bottom: 14px;
+}
+
+.pricing__cost {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 62px;
+  letter-spacing: -2.4px;
+  color: #18214D;
+  margin-bottom: 16px;
+  position: relative;
+  margin-left: -51px;
+}
+
+.pricing__cost:before {
+  content: '₽';
+  position: absolute;
+  top: 6px;
+  right: 52px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+}
+
+.pricing__cost:after {
+  content: '/мес';
+  position: absolute;
+  bottom: 6px;
+  right: 26px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+}
+
+.pricing__description {
+  line-height: 26px;
+  letter-spacing: -0.3px;
+}
+
+.pricing__wrap {
+  min-height: 109px;
+  margin-bottom: 20px;
+}
+
+.pricing__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.pricing__more {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.4px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #18214D;
 }
