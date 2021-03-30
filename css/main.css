@@ -99,7 +99,7 @@ body {
 
 .header {
   padding-top: 27px;
-  padding-bottom: 215px;
+  padding-bottom: 157px;
 }
 
 .header__top {
@@ -112,13 +112,20 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 172px;
+  margin-bottom: 106px;
 }
 
 .header__link {
   line-height: 30px;
   letter-spacing: -0.55px;
   color: #18214D;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__link:hover {
+  color: #F64B2D;
 }
 
 .header__link + .header__link {
@@ -203,6 +210,68 @@ body {
 
 .slide__request-btn {
   margin-right: 16px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.slide__request-btn:hover {
+  background-color: #e62b0a;
+}
+
+.slide__rate-btn {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  position: relative;
+}
+
+.slide__rate-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F64B2D;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.slide__rate-btn:hover,
+.slide__rate-btn:focus,
+.slide__rate-btn:active {
+  color: white;
+}
+
+.slide__rate-btn:hover:before,
+.slide__rate-btn:focus:before,
+.slide__rate-btn:active:before {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .finances {
@@ -220,10 +289,10 @@ body {
   display: block;
   position: absolute;
   top: 237px;
-  left: 0;
-  z-index: -20;
-  background: -o-linear-gradient(308.27deg, rgba(246, 75, 45, 0.3) 11.03%, rgba(246, 75, 45, 0.3) 90.65%);
-  background: linear-gradient(141.73deg, rgba(246, 75, 45, 0.3) 11.03%, rgba(246, 75, 45, 0.3) 90.65%);
+  left: -8px;
+  z-index: -1;
+  background: -o-linear-gradient(308.27deg, rgba(246, 75, 45, 0.5) 11.03%, rgba(246, 75, 45, 0.5) 90.65%);
+  background: linear-gradient(141.73deg, rgba(246, 75, 45, 0.5) 11.03%, rgba(246, 75, 45, 0.5) 90.65%);
   -webkit-filter: blur(300px);
   filter: blur(300px);
   width: 50%;
@@ -237,7 +306,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 72px;
+  margin-bottom: 41px;
 }
 
 .finances-top__title {
@@ -250,7 +319,7 @@ body {
 
 .finances-top__description {
   padding-top: 6px;
-  max-width: 420px;
+  max-width: 443px;
   line-height: 26px;
   letter-spacing: -0.3px;
   color: rgba(255, 255, 255, 0.8);
@@ -263,6 +332,10 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.stats {
+  margin-top: 31px;
 }
 
 .stats__item {
@@ -367,13 +440,17 @@ body {
   border-radius: 100px;
 }
 
+.steps {
+  width: 40%;
+}
+
 .steps__item {
   position: relative;
   padding-left: 65px;
 }
 
 .steps__item + .steps__item {
-  margin-top: 74px;
+  margin-top: 72px;
 }
 
 .steps__wrapper {
@@ -401,6 +478,7 @@ body {
   line-height: 30px;
   letter-spacing: -0.55px;
   color: #FFFFFF;
+  margin-bottom: 6px;
 }
 
 .steps__subscription {
@@ -414,6 +492,17 @@ body {
 .pricing {
   padding: 100px 0 128px;
   overflow: hidden;
+}
+
+.pricing__rate-btn {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.pricing__rate-btn:hover {
+  background-color: #F64B2D;
+  color: #fff;
 }
 
 .pricing__title {
@@ -523,10 +612,17 @@ body {
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #18214D;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.pricing__more:hover {
+  color: #F64B2D;
 }
 
 .reviews {
-  padding: 100px 0 72px;
+  padding: 66px 0 72px;
 }
 
 .reviews__container {
@@ -578,7 +674,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 .reviews-top__image {
