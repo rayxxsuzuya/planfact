@@ -13,9 +13,11 @@ for (let i = 0; i < slides.length; i++) {
     if(e.target.classList.contains('request-btn') || e.target.classList.contains('rate-btn')) {
       return false;
     } else {
-      slides[currentSlide].className = 'slide';
-      currentSlide = (currentSlide+1)%slides.length;
-      slides[currentSlide].className = 'slide active';
+      nextSlide();
+      clearInterval(slideInterval);
+      setTimeout(function() {
+        slideInterval = setInterval(nextSlide, 6000);
+      }, 4000)
     }
   });
 }
